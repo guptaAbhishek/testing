@@ -32,7 +32,7 @@ app.get('*',function(req,res){
     res.render('index.html')
 });
 
-var gKey = "AIzaSyDFJ46AyYHdr1VbttLQrY5-2R2nmkGLEcw";
+var gKey = "AIzaSyDFJ46AyYHdr1VbttLQrY5-2R2nmkGLEc";
 // var google_pagespeed_insights_url = "https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://hindustantimes.com&filter_third_party_resources=true&key=AIzaSyDFJ46AyYHdr1VbttLQrY5-2R2nmkGLEcw";
 
 app.post('/getGooglePageSpeedInsights',function(req,res){
