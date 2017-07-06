@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>HT Subscription</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.5.2/angular-local-storage.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.2.js"></script>
+    <!--<script src="js/select2.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css' type='text/css' media='all' />
+    <!--Start of Cards Css-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js"></script>
+
+
+
+    <script src="controllers/AppController.js"></script>
+    <script src="controllers/GooglePageSpeedController.js"></script>
+    <script src="services/DataServices.js"></script>
+    <script src="routes.js"></script>
+
+    <link href="http://www.hindustantimes.com/res/css-ns/combine.css" rel="stylesheet">
+    <!--<link href="css/style.css" rel="stylesheet">-->
+    <link href="css/style-subcription.css" rel="stylesheet">
+</head>
+<body ng-app="HtPageSpeed">
+<!--ng view tag -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="img/ht_logo-square.png" style="width: 50px;height: 50px;">
+            </a>
+        </div>
+        <!--<div>-->
+        <!--<button class="btn btn-danger pull-right" style="margin-top: 7px;" ng-click="logout()">Logout</button>-->
+        <!--</div>-->
+    </div>
+</nav>
+<div ng-view></div>
+
+
+</body>
+</html>

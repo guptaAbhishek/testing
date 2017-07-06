@@ -1,0 +1,31 @@
+{
+  "name": "pagespeed",
+  "version": "0.0.1",
+  "description": "Page speed analysis ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node index.js"
+  },
+  "author": "Abhishek Kumar Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "catchpoint-api": "0.0.5",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-htmlmin": "^2.2.0",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-minify-html": "^2.1.0",
+    "grunt-ng-annotate": "^3.0.0",
+    "grunt-stripcomments": "^0.6.0",
+    "morgan": "^1.8.2",
+    "request": "^2.81.0"
+  }
+}

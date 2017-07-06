@@ -1,0 +1,76 @@
+<div class="container" ng-init="htPageSpeedAnalysis()">
+    <div class="row">
+        <h2>Google Page Speed Insights </h2>
+        <hr/>
+        <div ng-if="htPageSpeedAnalysisData.length == 2" ng-repeat="ht in htPageSpeedAnalysisData">
+            <div ng-if="ht.desktop" class="desktop">
+                <h2>
+                    <a href="ht.desktop.id">{{ht.desktop.id}}</a>
+                    <span style="color:green;">Desktop: {{ht.desktop.ruleGroups.SPEED.score}}/100</span>
+                </h2>
+                <p>{{ht.desktop.title}}</p>
+                <span style="color: rebeccapurple;">Server:{{ht.desktop.formattedResults.locale}} | </span>
+                <span style="color: rebeccapurple;">numberResources:{{ht.desktop.pageStats.numberResources}} | </span>
+                <span style="color: rebeccapurple;">numberHosts:{{ht.desktop.pageStats.numberHosts}} | </span>
+                <span style="color: rebeccapurple;">javascriptResponseBytes:{{ht.desktop.pageStats.javascriptResponseBytes | convertToMB}} | </span>
+
+
+
+                <table class="table-bordered">
+                    <thead>
+                        <th>Rules</th>
+                        <th>RuleImpact</th>
+                        <th>Reasons</th>
+                        <th>HT</th>
+                        <th>Non HT</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="rule in desktop_rule_impact">
+                            <td>{{rule.localizedRuleName}}</td>
+                            <td>{{rule.ruleImpact}}</td>
+                            <td>{{rule.summary.format}}</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            <hr/>
+            </div>
+            <div ng-if="ht.mobile" class="mobile">
+                <h2>
+                    <a href="ht.mobile.id">{{ht.mobile.id}}</a>
+                    <span style="color:blueviolet;">Mobile: {{ht.mobile.ruleGroups.SPEED.score}}/100</span>
+                </h2>
+                <p>{{ht.mobile.title}}</p>
+                <span style="color: rebeccapurple;">Server:{{ht.mobile.formattedResults.locale}} | </span>
+                <span style="color: rebeccapurple;">numberResources:{{ht.mobile.pageStats.numberResources}} | </span>
+                <span style="color: rebeccapurple;">numberHosts:{{ht.mobile.pageStats.numberHosts}} | </span>
+                <span style="color: rebeccapurple;">javascriptResponseBytes:{{ht.mobile.pageStats.javascriptResponseBytes | convertToMB}} | </span>
+                <table class="table-bordered">
+                    <thead>
+                    <th>Rules</th>
+                    <th>RuleImpact</th>
+                    <th>Reasons</th>
+                    <th>HT</th>
+                    <th>Non HT</th>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="rule in mobile_rule_impact">
+                        <td>{{rule.localizedRuleName}}</td>
+                        <td>{{rule.ruleImpact}}</td>
+                        <td>{{rule.summary.format}}</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <hr/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h2>Catch Point HT Analysis</h2>
+        <hr/>
+    </div>
+</div>
